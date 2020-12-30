@@ -16,7 +16,7 @@
 <hr>
 
 <div>
-    <p>User Input to component A from component B : {{ compB }}</p>
-    <app-b-comp [parentValue]="comp_A_UserInput" (dataSent)="dataReceiver($event)"></app-b-comp>
-    <p>User Input to component A from component B : {{ compB }}</p>
+    <!-- <p>User Input to component A from component B : {{ comp_A_UserInput }}</p> -->
+    <app-b-comp [parentValue]="comp_A_UserInput"></app-b-comp>
+    <!-- <p>User Input to component A from component B : {{ comp_A_UserInput }}</p> -->
 </div>
