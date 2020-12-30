@@ -1,22 +1,24 @@
-<div>
-    <h1>Component A</h1>
-    <label>Input for component A</label>
-    <div class="panel panel-primary">
-        <div class="panel-body">
-            <div class="form-group">
-                <input class="form-control" type="text" placeholder="Enter any text for component A" [(ngModel)]="comp_A_UserInput">
+<div class="row">
+    <div class="col col-md-6">
+        <h1>Component A</h1>
+        <label>Input for component A</label>
+        <div class="panel panel-primary">
+            <div class="panel-body">
+                <div class="form-group">
+                    <input class="form-control" type="text" placeholder="Enter any text for component A" [(ngModel)]="userInput_A">
+                </div>
             </div>
         </div>
+        <button (click)="callButton_A()">Component A >>> B</button>
+        <h4><u>msg from Component B to Component A</u></h4>
+        <p id="compA"></p>
     </div>
-    <div>
-        <p>User Input from component A : {{ comp_A_UserInput }}</p>
+
+    <div class="col col-md-6">
+        <div>
+            <app-b-comp [parentValue]="userInput_A" (compB)="textData($event)"></app-b-comp>
+        </div>
+        <h4><u>msg from Component A to Component B</u></h4>
+        <p id="compB"></p>
     </div>
-</div>
-
-<hr>
-
-<div>
-    <!-- <p>User Input to component A from component B : {{ comp_A_UserInput }}</p> -->
-    <app-b-comp [parentValue]="comp_A_UserInput"></app-b-comp>
-    <!-- <p>User Input to component A from component B : {{ comp_A_UserInput }}</p> -->
 </div>

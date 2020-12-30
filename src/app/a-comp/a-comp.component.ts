@@ -7,5 +7,13 @@ import { Component } from '@angular/core';
 })
 
 export class A_CompComponent {
-    comp_A_UserInput: any;
+    userInput_A: any;
+
+    textData(data: any) {
+        this.userInput_A = data;
+    }
+
+    callButton_A() {
+        document.getElementById('compB').innerHTML = this.userInput_A;
+    }
 }
