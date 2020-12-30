@@ -6,4 +6,6 @@ import { Component } from '@angular/core';
     styleUrls: ['./a-comp.component.css']
 })
 
-export class A_CompComponent {}
+export class A_CompComponent {
+    comp_A_UserInput: any;
+}

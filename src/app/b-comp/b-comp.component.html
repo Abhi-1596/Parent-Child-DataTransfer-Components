@@ -1,3 +1,14 @@
 <div>
-    <h1>Component B works!</h1>
+    <h1>Component B</h1>
+    <label>Input for component B</label>
+    <div class="panel panel-primary">
+        <div class="panel-body">
+            <div class="form-group">
+                <input class="form-control" type="text" placeholder="Enter any text for component B" [(ngModel)]="comp_B_UserInput">
+            </div>
+        </div>
+    </div>
+    <div>
+        User Input from component B : {{ comp_B_UserInput }}
+    </div>
 </div>
