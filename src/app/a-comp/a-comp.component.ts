@@ -8,4 +8,6 @@ import { Component } from '@angular/core';
 
 export class A_CompComponent {
     comp_A_UserInput: any;
+
+    
 }
