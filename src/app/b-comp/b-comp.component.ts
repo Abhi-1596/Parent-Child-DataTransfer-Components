@@ -8,11 +8,7 @@ import { EventEmitter } from 'events';
 })
 
 export class B_CompComponent {
+    @Input('parentValue') compA: any;
+
     comp_B_UserInput: any;
-
-    @Input() comp_A_UserInput: any;
-
-    // @Output() compB: EventEmitter = new EventEmitter();
-
-
 }

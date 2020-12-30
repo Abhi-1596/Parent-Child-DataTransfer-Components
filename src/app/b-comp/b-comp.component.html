@@ -4,11 +4,14 @@
     <div class="panel panel-primary">
         <div class="panel-body">
             <div class="form-group">
-                <input class="form-control" type="text" placeholder="Enter any text for component B" [(ngModel)]="comp_B_UserInput">
+                <input class="form-control" type="text" placeholder="Enter any text for component B" [(ngModel)]="comp_B_UserInput" 
+                        (change)="send2CompA()">
             </div>
         </div>
     </div>
     <div>
-        User Input from component B : {{ comp_B_UserInput }}
+        <p>User Input from component B : {{ comp_B_UserInput }}</p>
+        <hr>
+        <p>User Input to component B from component A : {{ compA }}</p>
     </div>
 </div>
