@@ -9,12 +9,21 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 export class B_CompComponent {
     @Input('parentValue') compA: any;
 
-    userInput_B: any;
+    public userInput_B: any;
 
     @Output() compB = new EventEmitter();
 
 
     callButton_B() {
         document.getElementById('compA').innerHTML = this.userInput_B;
+    }
+
+    callClear_B() {
+        this.userInput_B = "";
+        this.callButton_B();
+    }
+
+    callAllClear() {
+        this.callClear_B();
     }
 }

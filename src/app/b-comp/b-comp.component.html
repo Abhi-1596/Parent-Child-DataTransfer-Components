@@ -8,7 +8,12 @@
             </div>
         </div>
     </div>
-    <div>
-        <button (click)="callButton_B()" class="btn btn-secondary">Component B >>> A</button>
+    <div class="row">
+        <div class="col col-md-6">
+            <button (click)="callButton_B()" class="btn btn-secondary">Component B >>> A</button>
+        </div>
+        <div class="col col-md-6">
+            <button (click)="callClear_B()" class="btn btn-warning">Clear</button>
+        </div>
     </div>
 </div>

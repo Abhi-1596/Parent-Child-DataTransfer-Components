@@ -8,12 +8,21 @@ import { Component } from '@angular/core';
 
 export class A_CompComponent {
     userInput_A: any;
-
+    
     textData(data: any) {
         this.userInput_A = data;
     }
 
     callButton_A() {
         document.getElementById('compB').innerHTML = this.userInput_A;
+    }
+
+    callClear_A() {
+        this.userInput_A = "";
+        this.callButton_A();
+    }
+
+    callAllClear() {
+        this.callClear_A();
     }
 }

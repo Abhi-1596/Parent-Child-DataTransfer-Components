@@ -9,7 +9,14 @@
                 </div>
             </div>
         </div>
-        <button (click)="callButton_A()" class="btn btn-primary">Component A >>> B</button>
+        <div class="row">
+            <div class="col col-md-6">
+                <button (click)="callButton_A()" class="btn btn-primary">Component A >>> B</button>
+            </div>
+            <div class="col col-md-6">
+                <button (click)="callClear_A()" class="btn btn-warning">Clear</button>
+            </div>
+        </div>
         <h4><u>msg from Component B to Component A</u></h4>
         <p id="compA"></p>
     </div>
